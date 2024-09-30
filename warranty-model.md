@@ -1,2 +1,0 @@
-# Warranty Model
-

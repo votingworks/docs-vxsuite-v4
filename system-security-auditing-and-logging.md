@@ -1,2 +1,0 @@
-# System Security, Auditing, & Logging
-
