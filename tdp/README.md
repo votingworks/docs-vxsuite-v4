@@ -1,2 +1,1 @@
-# Quality Assurance Manual
-
+# vxsuite-v4-documentation

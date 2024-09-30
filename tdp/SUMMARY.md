@@ -9,6 +9,7 @@
   * [Election Package](system-overview/election-package/README.md)
     * [VxSuite Election Definition](system-overview/election-package/vxsuite-election-definition.md)
     * [Ballot Definition CDF](system-overview/election-package/ballot-definition-cdf.md)
+  * [Cast Vote Records](system-overview/cast-vote-records.md)
 * [System Performance & Specifications](system-performance-and-specifications.md)
 * [Software Installation](software-installation.md)
 * [System Operations & Training Manual](system-operations-and-training-manual.md)
