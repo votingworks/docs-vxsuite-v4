@@ -68,11 +68,39 @@ In VxScan, images of rejected ballots are always included. In VxCentralScan, ima
 
 ## CDF Cast Vote Record Report
 
-This section describes how the various CDF attributes are used in relation to the interpretation of the ballot and the [VxSuite Election Definition](election-package/vxsuite-election-definition.md).
+This section describes how the various CDF attributes are used to convey information about the election and each ballot.
 
-### Top Level Report Attributes
+### Report Metadata
 
-Attributes used on the `CastVoteRecordReport` :
+The CDF specification includes many metadata fields that might help a consumer make sense of the cast vote record data. For example, you may define the candidates that are referenced as contest selections. VxSuite cast vote records all include this metadata to conform to the CDF, but nearly none of it is actually utilized when imported into VxAdmin. VxAdmin already has that information from the [election package](../../system-overview/election-package/). The only data that is utilized by VxAdmin is the `GeneratedDate` and the indication of whether or not the report is a test report in `ReportType` and `OtherReportType`.
 
-<table><thead><tr><th width="204">Attribute</th><th>Usage</th></tr></thead><tbody><tr><td>Version</td><td>"1.0.0"</td></tr><tr><td>ReportType</td><td></td></tr><tr><td></td><td></td></tr></tbody></table>
+#### CastVoteRecordReport
+
+<table><thead><tr><th width="277">CDF Attribute</th><th>Usage</th></tr></thead><tbody><tr><td>Version</td><td>Fixed to "1.0.0"</td></tr><tr><td>ReportType</td><td>Always includes "originating-device-export". If a test report, also includes "other"</td></tr><tr><td>OtherReportType</td><td>If a test report, "test", otherwise undefined</td></tr><tr><td>GeneratedDate</td><td>Generated date in <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">Date Time String Format</a></td></tr><tr><td>ReportGeneratingDeviceIds</td><td>Contains only the scanner serial number</td></tr></tbody></table>
+
+#### CastVoteRecordReport.ReportingDevices
+
+Only one `ReportingDevice` is ever listed:
+
+<table><thead><tr><th width="212">CDF Attribute</th><th>Usage</th></tr></thead><tbody><tr><td>@id</td><td>Scanner serial number</td></tr><tr><td>SerialNumber</td><td>Scanner serial number</td></tr><tr><td>Manufacturer</td><td>Fixed to "VotingWorks"</td></tr></tbody></table>
+
+#### CastVoteRecordReport.Party
+
+The list of parties in the cast vote record report is mapped directly from the [Party](../../system-overview/election-package/vxsuite-election-definition.md#party-party) list in the election definition:
+
+<table><thead><tr><th width="203">CDF Attribute</th><th>Usage</th></tr></thead><tbody><tr><td>@id</td><td>Internal party identifier</td></tr><tr><td>Name</td><td>Full name of the party, e.g. "Democratic Party"</td></tr><tr><td>Abbreviation</td><td>Abbreviation of the party, e.g. "R"</td></tr></tbody></table>
+
+#### CastVoteRecordReport.GpUnit
+
+`GpUnit`s are created for each [Precinct](../../system-overview/election-package/vxsuite-election-definition.md#precinct-precinct) in the election, for the [County](../../system-overview/election-package/vxsuite-election-definition.md#county-county), and for the state:
+
+<table><thead><tr><th width="211">CDF Attribute</th><th>Usage</th></tr></thead><tbody><tr><td>@id</td><td><ul><li><strong>Precinct</strong>: Internal precinct identifier</li><li><strong>County</strong>: Fixed to "election-county"</li><li><strong>State:</strong> Fixed to "election-state"</li></ul></td></tr><tr><td>Type</td><td><ul><li><strong>Precinct:</strong> "precinct"</li><li><strong>County</strong> or <strong>State:</strong> "other"</li></ul></td></tr><tr><td>Name</td><td>Precinct, county, or state name</td></tr></tbody></table>
+
+#### CastVoteRecordReport.Election
+
+The `Election` class has values mapped to it directly from the [election definition](../../system-overview/election-package/vxsuite-election-definition.md): &#x20;
+
+<table><thead><tr><th width="314">CDF Attribute</th><th>Usage</th></tr></thead><tbody><tr><td>@id</td><td>The election's <a href="../../system-overview/election-package/#election-package-and-ballot-hashes">ballot hash</a></td></tr><tr><td>Name</td><td>The title of the election</td></tr><tr><td>ElectionScopeId</td><td>Fixed "election-state"</td></tr><tr><td>Candidate.@id</td><td>Internal candidate identifier</td></tr><tr><td>Candidate.Name</td><td>The candidate name</td></tr><tr><td>Contest.@id</td><td>Internal contest identifier</td></tr><tr><td>Contest.Name</td><td>The contest title</td></tr><tr><td>CandidateContest.VotesAllowed</td><td>The contest's number of seats</td></tr><tr><td>CandidateContest.PrimaryPartyId</td><td>The internal identifier of the associated party, if a primary contest</td></tr><tr><td>CandidateSelection.@id</td><td>Internal candidate identifier</td></tr><tr><td>CandidateSelection.CandidateIds</td><td>Internal candidate identifier</td></tr><tr><td>CandidateSelection.IsWriteIn</td><td>Whether the selection represents a write-in bubble</td></tr><tr><td>BallotMeasureSelection.@id</td><td>Internal yes or no option identifier</td></tr><tr><td>BallotMeasureSelection.Selection</td><td>Label for the option that appeared on the ballot</td></tr></tbody></table>
+
+### Cast Vote Record Attributes
 
