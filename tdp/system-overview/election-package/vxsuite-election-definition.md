@@ -18,7 +18,7 @@ The VxSuite Election Definition is a data format for defining an election that i
 
 ## Core Election Attributes and Relationships
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Election Entity Relationship Diagram</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Election Entity Relationship Diagram</p></figcaption></figure>
 
 ### Election (Election)
 
@@ -175,7 +175,7 @@ The language codes used are the [IETF language tags](https://www.w3.org/Internat
 
 Grid layouts describe where the bubbles and write-in areas exist on each ballot style. They must correspond exactly to the ballots used for the election in order for interpretation to succeed. For more information on the acceptable ballot format and its relationship to grid coordinates, see [Hand Marked Ballots](../hand-marked-ballots.md).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Relationship of grid layouts to other entities in the election definition</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Relationship of grid layouts to other entities in the election definition</p></figcaption></figure>
 
 `gridLayouts` is an `array` which contains entities with the following attributes:
 

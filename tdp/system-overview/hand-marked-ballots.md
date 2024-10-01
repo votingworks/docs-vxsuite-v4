@@ -38,7 +38,7 @@ These lengths correspond to the length specified in the [Ballot Layout](hand-mar
 
 ## Timing Mark Grid
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Example of a timing mark-grid on letter-sized paper (scaled)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Example of a timing mark-grid on letter-sized paper (scaled)</p></figcaption></figure>
 
 The timing mark grid must exist on every ballot, front and back. The timing marks and page margins are strictly defined:
 
@@ -75,7 +75,7 @@ For full specifications on how to generate readable QR codes, view the [ballot e
 
 The interpreter looks for ballots in the top-right and bottom-left corners of the ballot within squares that are 1/4 of the width across.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Highlighted areas must contain a QR code</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Highlighted areas must contain a QR code</p></figcaption></figure>
 
 ## Bubble Format
 
