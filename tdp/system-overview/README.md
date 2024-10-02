@@ -14,7 +14,7 @@ layout:
 
 # System Overview
 
-<figure><img src="../.gitbook/assets/Untitled (3).png" alt=""><figcaption><p>Top Level System Diagram</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Top level system diagram</p></figcaption></figure>
 
 The VotingWorks voting system (a.k.a. **VxSuite**) consists of four primary components: VxAdmin, VxMark, VxScan, and VxCentralScan.&#x20;
 

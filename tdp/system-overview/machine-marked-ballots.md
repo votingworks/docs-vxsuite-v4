@@ -2,11 +2,11 @@
 
 After a voter is done making selections at VxMark, the machine will print a ballot representing the selections. The voter reviews the ballot, after which it is deposited in the attached ballot box. Eventually, those ballots are scanned at VxScan or VxCentralScan.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>VxMark ballot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt="" width="563"><figcaption><p>VxMark ballot</p></figcaption></figure>
 
 ## Ballot Layout
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Parts of a VxMark ballot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt="" width="563"><figcaption><p>Parts of a VxMark ballot</p></figcaption></figure>
 
 The ballot displays information about the election, metadata about the ballot, and the voter's selections. The selections are both displayed and encoded in the QR code.&#x20;
 
@@ -18,7 +18,7 @@ The padding at the top of the ballot is included so the entire ballot is visible
 
 If VxMark is being used in a language other than English, the resulting ballot will be multi-lingual and feature the other language. All pieces of text that appear on the VxMark ballot may have translations specified in the [ballot strings](election-package/vxsuite-election-definition.md#ballot-strings) specified in the election definition which will then be used when printing the ballot.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>English/Chinese VxMark ballot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt="" width="563"><figcaption><p>English/Chinese VxMark ballot</p></figcaption></figure>
 
 ## QR Code
 
