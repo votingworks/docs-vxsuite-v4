@@ -32,14 +32,14 @@ Contest results are organized simply with a row for candidate or option. Because
 
 As a rule, the sum of the number of votes for all candidates, the number of undervotes, and the number of overvotes will equal the number of total possible votes for the contest, which is the number of ballots times the number of selections allowed.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt="" width="563"><figcaption><p>Polls opened report for a primary election</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt="" width="563"><figcaption><p>Polls opened report for a primary election</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Polls closed report for a general election in test mode</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>Polls closed report for a general election in test mode</p></figcaption></figure>
 
 ## Polls Paused and Resumed Reports
 
 When voting is paused or resumed, VxScan prints a report containing the ballot count. Tally results are never included. The metadata is structured in the same way as the polls opened and closed reports.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt="" width="563"><figcaption><p>Voting paused report</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt="" width="563"><figcaption><p>Voting paused report</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Voting resumed report</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt="" width="563"><figcaption><p>Voting resumed report</p></figcaption></figure>

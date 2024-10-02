@@ -175,7 +175,7 @@ The language codes used are the [IETF language tags](https://www.w3.org/Internat
 
 Grid layouts describe where the bubbles and write-in areas exist on each ballot style. They must correspond exactly to the ballots used for the election in order for interpretation to succeed. For more information on the acceptable ballot format and its relationship to grid coordinates, see [Hand Marked Ballots](../hand-marked-ballots.md).
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Relationship of grid layouts to other entities in the election definition</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Relationship of grid layouts to other entities in the election definition</p></figcaption></figure>
 
 `gridLayouts` is an `array` which contains entities with the following attributes:
 
