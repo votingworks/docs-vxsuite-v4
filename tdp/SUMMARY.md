@@ -18,6 +18,8 @@
     * [CSV Exports](system-overview/vxadmin-results-exports/csv-exports.md)
     * [Write-In Adjudication Report](system-overview/vxadmin-results-exports/write-in-adjudication-report.md)
     * [CDF ERR Export](system-overview/vxadmin-results-exports/cdf-err-export.md)
+  * [Software Overview](system-overview/software-overview.md)
+  * [User Roles](system-overview/user-roles.md)
 * [System Performance & Specifications](system-performance-and-specifications.md)
 * [Software Installation](software-installation.md)
 * [System Operations & Training Manual](system-operations-and-training-manual.md)
