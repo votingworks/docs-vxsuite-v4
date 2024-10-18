@@ -17,6 +17,8 @@ Table should then provide details for each requirement:
 
 <table><thead><tr><th width="205">1.3-A.1 Requirement</th><th width="181">1.3-A.2 Items Tested</th><th width="210">1.3-B Details of this test</th><th>1.3-A.9 exceptional circumstances</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
 
+##
+
 ## Quality Assurance Protocols – Software
 
 ### Automated Unit Tests
