@@ -1,8 +1,6 @@
 # Configure VxMark
 
-{% hint style="info" %}
 The following steps must be completed by an Election Manager.
-{% endhint %}
 
 Before you configure VxMark, you must setup the machine. Follow [VxMark Hardware Setup](vxmark-hardware-setup.md) steps.
 
@@ -13,19 +11,17 @@ To configure **VxMark**, you must do two things:
 
 ## Ports
 
-Under the accessible controller is the smartcard reader and the USB port. To access the USB port, open the metal cover.  Seal and document as required.&#x20;
+The smart card reader is under the accessible controller.
+
+The USB port is accessible at the ballot box attachment point. The ballot box must be removed to insert a USB drive. Seal and document the ballot box as required.
 
 <div>
 
-<figure><img src="../.gitbook/assets/VxMark remove controller.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/VxMark remove controller.png" alt=""><figcaption><p>Accessible Controller</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/VxMark card reader and USB drive.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/VxMark usb port exposed.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/VxMark card reader and USB drive.png" alt=""><figcaption><p>Smart Card Reader</p></figcaption></figure>
 
 </div>
 
