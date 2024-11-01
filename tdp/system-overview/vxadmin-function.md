@@ -108,7 +108,7 @@ If a marked write-in is adjudicated as an undervote, in addition to updating the
 
 VxAdmin offers a way to enter manual tallies that are then added to reports. When manual tallies are present in a results export, they are always displayed separately from scanned tallies so that users can easily recognize the impact of manual results and recognize any human errors. The only exception to this rule is the CDF election results export in which, due to the limitations of the CDF, the manual and scanned tallies are simply combined.
 
-The ballot style, precinct, and voting method (absentee vs. precinct) must be specified before entering manual tallies. By associating manual tallies with these pieces of metadata, they can be filtered and grouped according to those dimensions when creating reports. Notably, manual tallies are not associated with a batch or a scanner like CVRs are, so manual tallies do not appear in reports that filter or group on those dimensions.
+The ballot style, precinct, and voting method (absentee vs. precinct) must be specified before entering manual tallies. By associating manual tallies with these pieces of metadata, they can be filtered and grouped according to those dimensions when creating reports. Notably, manual tallies are not associated with a batch or a scanner like CVRs. When filtering on batch or scanner, manual tallies are excluded. When grouping by batch or scanner, manual tallies are treated as a single batch or scanner.
 
 The manual tallies for each contest are validated according to a standard formula:
 
