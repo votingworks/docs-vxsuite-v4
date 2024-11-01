@@ -8,21 +8,21 @@ The two primary criteria we consider when assessing criticality are **ability to
 
 ## Relationship to Sensitive Election Data
 
-Any component that processes election data is at least medium criticality because, if it fails or is compromised by a malicious actor, it could theoretically alter configuration, operation, tabulation, or aggregation which could compromise the interpretation of ballots, election tallies, or voter privacy.
+Any component that processes election data is at least medium criticality because, if it fails or is compromised by a malicious actor, it could theoretically alter configuration, operation, tabulation, or aggregation which could compromise the interpretation of ballots, the tallying of votes, or voter privacy.
 
 **Example 1:** Any scanner in the system, because it is responsible for recording ballot images, is a high criticality component. Defects in the scanner could produce unreliable ballot images. Sophisticated malicious attacks could alter firmware or intercept data transmission to produce altered images.
 
-**Example 2:** USB cables transfer election data between components and are always at least medium criticality. USB cables are generally simple and replaceable, but highly sophisticated attacks involving manipulating data passing through a USB cable are possible.
+**Example 2:** USB cables transfer election data between components and are always at least medium criticality. USB cables are generally simple and substitutable, but highly sophisticated attacks involving manipulating data passing through a USB cable are possible.
 
 **Example 3:** Power cables don't carry data to and from devices so, even though they are obviously critical to the operation of the device, they don't have a direct relationship to sensitive election data and are not more critical as a result.
 
 ## Ability to Find Alternative Suppliers
 
-Most components can be or already are manufactured by multiple manufacturers. Standard screws can be purchased from various suppliers. Custom plastic or sheet metal components can be molded or cut by any number of manufacturers. Even power cables, simple USB cables, or something like a computer mouse can easily replace an equivalent.&#x20;
+Most components can be or already are manufactured by multiple manufacturers. Standard screws can be purchased from various suppliers. Custom plastic or sheet metal components can be molded or cut by any number of manufacturers. Even power cables, simple USB cables, or something like a computer mouse can easily be replaced by an equivalent.&#x20;
 
-Some essential VxSuite components are unique to a single supplier or a small set of suppliers, however, making them at least medium criticality. When there is a single supplier, the product cannot be built as-designed without the support of that supplier. Additionally, a single supplier creates a direct supply chain attack vector.
+Some essential VxSuite components are unique to a single supplier or a small set of suppliers, however, making them at least medium criticality. When there is a single supplier, the product cannot be built as designed without the support of that supplier. Additionally, a single supplier creates a direct possible supply chain attack vector.
 
-**Example 1:** The embedded scanner in VxScan is manufactured and sold only by Peripheral Dynamics, Inc. Without being able to source the scanner from them, it would not be possible to build VxScan as is exists today, meaning the scanner high criticality.
+**Example 1:** The embedded scanner in VxScan is manufactured and sold only by Peripheral Dynamics, Inc. Without being able to source the scanner from them, it would not be possible to build VxScan as it exists today, meaning the scanner has high criticality.
 
 **Example 2:** The case that forms the exterior of VxScan is a Pelican 1485 Air case. The product is designed around the case and, without the case, the product could not be built as-is, so the case is at least medium criticality. Conceivably, an alternative could be found, but it would not be straightforward.
 
@@ -40,11 +40,13 @@ Simple components where failure is easily detected are less critical than comple
 
 A seal point or hinge may be more critical than an interior panel because, if it is defective, it could break the physical security model of a device and allow someone to access a machine without tamper-evidence.
 
-## Critical Components & Suppliers
+## Critical Components and Suppliers
 
 In each article describing the hardware of a specific component, some section will specify the high and medium criticality components and provide some explanation of why it is deemed critical. All unlisted components are low criticality.
 
 * [vxadmin-hardware.md](vxadmin-hardware.md "mention")
+
+
 
 
 
