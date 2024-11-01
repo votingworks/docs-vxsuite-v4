@@ -81,5 +81,43 @@ There are four code repositories relevant to the voting system:
 
 ## Software Traceability
 
+**NEED TO WRITE**
+
+## Common Software Functions
+
+Subsequent articles will describe the particular software design of each application, but some software patterns are common across all applications and described here.
+
+### USB Management
+
+All VxSuite components require a USB drive at some point in their operation for configuration or for the import or export of results. The application is polling for attached USB drives multiple times per second. If a USB drive with a FAT32 partition is detected, the application will attempt to mount the USB drive to a known mount point. Once mounted, the USB drive will be available for use by the application.
+
+The USB drive should be ejected before removing it. Most critical operations also make sure to sync the data to the USB drive before allowing the user to continue, however, so removing the USB drive without ejecting will normally not result in problems.
+
+Only one USB drive can be used at a time and additional USB drives inserted after the first USB drive will be ignored.
+
+### Document Creation
+
+All VxSuite components must generate documents for printing or export. VxAdmin and VxScan must generate tally and ballot count reports. All components must generate diagnostic readiness reports.&#x20;
+
+In order to do so, the applications have a headless browser (specifically Chromium) launched by the backend. Exported documents are all defined in terms of HTML (using React), so the headless browser is able to load the documents and render them as PDFs. The PDFs can then be sent to printer or saved to a USB drive.
+
+### Date & Time Management
+
+The date and time is set on the machine in during initial configuration before the machine is sent to a customer. There is some amount of "clock drift" over time for all computers, however, so eventually the clocks may be wrong. This may cause problems with authentication due to mismatched timestamps and will cause reports to have incorrect timestamps.
+
+All machines allow system administrators and election managers to edit the date, time, and time zone in order to address clock drift or, in rare cases, to set up machines for use in a part of the jurisdiction with different time settings.
+
+{% hint style="info" %}
+**User Manual Reference**: [Setting Date & Time](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxadmin-system-setup/setting-date-and-time "mention")
+{% endhint %}
+
+
+
+
+
+
+
+
+
 
 

@@ -44,7 +44,7 @@ A seal point or hinge may be more critical than an interior panel because, if it
 
 In each article describing the hardware of a specific component, some section will specify the high and medium criticality components and provide some explanation of why it is deemed critical. All unlisted components are low criticality.
 
-* [vxadmin-and-vxcentralscan-hardware.md](vxadmin-and-vxcentralscan-hardware.md "mention")
+* [vxadmin-hardware.md](vxadmin-hardware.md "mention")
 
 
 

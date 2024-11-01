@@ -196,7 +196,11 @@ The **Ballot Count** is defined in VxSuite as simply the count of first sheets. 
 
 ## Printer Management
 
+VxAdmin can print reports via an attached printer. The supported printer is the HP LaserJet Pro 4001dn. VxAdmin can also export reports as PDFs so, in the event of a printer failure, reports will always be available.
 
+VxAdmin interfaces with the printer through the CUPS, the open-source printing system developed by Apple and installed on our Debian system. When a printer is attached, it is registered with the CUPS server and made available to the application. VxAdmin is able to send print jobs to the printer via CUPS commands. The HP LaserJetPro does not require any additional third-party or in-house driver because it supports the IPP (Internet Printing Protocol) which CUPS then utilizes.&#x20;
 
+Using IPP, the VxAdmin is also able to poll the detailed status (toner level, jam status, etc.) of the printer for use in the diagnostics interface.
 
+VxAdmin can only connect with one printer at a time and will always connect with with the first attached printer.
 

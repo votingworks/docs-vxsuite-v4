@@ -1,5 +1,9 @@
 # VxAdmin & VxCentralScan Hardware
 
+## Overview
+
+\[insert images and explanations]
+
 ## Bill of Materials
 
 All components for VxAdmin and VxCentralScan are commercial-off-the-shelf (COTS) components. Data sheets and related documentation are available [in the documentation repository](https://github.com/votingworks/vxsuite-v4-documentation/tree/main/hardware-assets/cots-documentation/central-system).
