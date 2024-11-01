@@ -194,6 +194,10 @@ When tallying ballot counts, VxAdmin is actually tallying sheet counts. In an el
 
 The **Ballot Count** is defined in VxSuite as simply the count of first sheets. For example, if there are 1,000 first sheets and 999 second sheets, the ballot count will appear in reports as 1,000.
 
+## Official vs. Unofficial Results
+
+TODO: DREW
+
 ## Printer Management
 
 VxAdmin can print reports via an attached printer. The supported printer is the HP LaserJet Pro 4001dn. VxAdmin can also export reports as PDFs so, in the event of a printer failure, reports will always be available.
