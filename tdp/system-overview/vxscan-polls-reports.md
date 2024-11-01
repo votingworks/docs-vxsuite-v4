@@ -32,9 +32,9 @@ Contest results are organized simply with a row for candidate or option. Because
 
 As a rule, the sum of the number of votes for all candidates, the number of undervotes, and the number of overvotes will equal the number of total possible votes for the contest, which is the number of ballots times the number of selections allowed.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt="" width="563"><figcaption><p>Polls opened report for a primary election</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt="" width="563"><figcaption><p>Polls opened report for a primary election</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>Polls closed report for a general election in test mode</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt="" width="563"><figcaption><p>Polls closed report for a general election in test mode</p></figcaption></figure>
 
 ## Polls Paused and Resumed Reports
 

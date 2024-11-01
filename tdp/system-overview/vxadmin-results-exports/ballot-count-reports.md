@@ -20,7 +20,7 @@ Whereas in tally reports, each group corresponds to a subsection of the report, 
 
 In the follwing example, the ballot counts are grouped by both precinct and voting method:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Ballot count report grouped by precinct and voting method</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Ballot count report grouped by precinct and voting method</p></figcaption></figure>
 
 The following metadata columns may appear in a ballot count report table in order to specify groupings:
 
@@ -28,4 +28,4 @@ The following metadata columns may appear in a ballot count report table in orde
 
 Filters apply to the entire report and are specified in the title for a simple filter or are specified by attribute below the title for a complex filter:
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption><p>Complex filter specified by attribute</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="375"><figcaption><p>Complex filter specified by attribute</p></figcaption></figure>

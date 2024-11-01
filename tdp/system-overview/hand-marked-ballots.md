@@ -38,7 +38,7 @@ These lengths correspond to the length specified in the [Ballot Layout](hand-mar
 
 ## Timing Mark Grid
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Example of a timing mark-grid on letter-sized paper (scaled)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption><p>Example of a timing mark-grid on letter-sized paper (scaled)</p></figcaption></figure>
 
 The timing mark grid must exist on every ballot, front and back. The timing marks and page margins are strictly defined:
 
@@ -75,7 +75,7 @@ For full specifications on how to generate readable QR codes, view the [ballot e
 
 The interpreter looks for ballots in the top-right and bottom-left corners of the ballot within squares that are 1/4 of the width across.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="563"><figcaption><p>Highlighted areas must contain a QR code</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption><p>Highlighted areas must contain a QR code</p></figcaption></figure>
 
 ## Bubble Format
 
@@ -94,7 +94,7 @@ In order to be interpreted correctly, bubbles must meet the following dimensions
 
 In the election definition, bubble positions and other ballot regions are specified relative to the grid coordinates. The ballot grid is an XY grid with the origin in the top-left corner. For example, the coordinate **(5, 3)** would correspond to the following position on the ballot:
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 **Notes:**
 
@@ -106,4 +106,4 @@ In the election definition, bubble positions and other ballot regions are specif
 
 Below is a complete ballot that, when paired with the appropriate election definition, could be interpreted within VxSuite:
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt="" width="563"><figcaption><p>Valid ballot with timing marks, QR code, and bubbles</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt="" width="563"><figcaption><p>Valid ballot with timing marks, QR code, and bubbles</p></figcaption></figure>

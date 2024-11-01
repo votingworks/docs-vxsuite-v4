@@ -14,7 +14,7 @@ layout:
 
 # System Overview
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Top level system diagram</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Top level system diagram</p></figcaption></figure>
 
 The VotingWorks voting system (a.k.a. **VxSuite**) consists of four primary components: VxAdmin, VxMark, VxScan, and VxCentralScan.&#x20;
 
@@ -48,5 +48,5 @@ After finishing with selections, the a [machine marked ballot](machine-marked-ba
 
 ## VxScan
 
-VxScan is the system's precinct scanner. At the beginning of an election, is configured with an election package from VxAdmin.
+VxScan is the system's precinct scanner. At the beginning of an election, it is configured with an election package from VxAdmin which specifies the ballot layouts. The polls are opened t
 

@@ -18,7 +18,7 @@ The VxSuite Election Definition is a data format for defining an election that i
 
 ## Core Election Attributes and Relationships
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Election Entity Relationship Diagram</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Election Entity Relationship Diagram</p></figcaption></figure>
 
 ### Election (Election)
 
