@@ -18,7 +18,7 @@ Ballot count reports contain no contest results, only ballot and ballot sheet co
 
 Whereas in tally reports, each group corresponds to a subsection of the report, in ballot count reports, each grouping corresponds to a row in the table. The ballot counts are broken down by ballot type - hand marked (HMPB), machine marked (BMD), and manual if applicable. If there are multi-sheet ballots, the hand marked ballot counts may have sheet counts specified. The count of the first sheet of each ballot style is considered the ballot count.
 
-In the follwing example, the ballot counts are grouped by both precinct and voting method:&#x20;
+In the following example, the ballot counts are grouped by both precinct and voting method:&#x20;
 
 <figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Ballot count report grouped by precinct and voting method</p></figcaption></figure>
 
