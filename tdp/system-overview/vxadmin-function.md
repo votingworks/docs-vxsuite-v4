@@ -1,5 +1,7 @@
 # VxAdmin Function
 
+VxAdmin acts as the election setup hub at the beginning of the election and the results aggregation and reporting hub at the end of an election (and also at the end of testing).
+
 ## Configuration and Election Packages
 
 Only a [system administrator ](user-roles.md#system-administrator-role)can authenticate onto an unconfigured VxAdmin and configure it with an election package from an external system. The election package must be loaded via a USB drive. The election package must be a valid `.zip` [election package](election-package/). If the election package zip file, election definition file, system settings file, or metadata file are not valid, VxAdmin will surface an error to the user.
@@ -196,7 +198,14 @@ The **Ballot Count** is defined in VxSuite as simply the count of first sheets. 
 
 ## Official vs. Unofficial Results
 
-TODO: DREW
+Results on VxAdmin are considered unofficial until the election manager marks them as official. As long as results are unofficial, CVRs can be loaded, write-ins can be adjudicated, and manual tallies can be added and edited. All reports and result exports are labelled as "Unofficial."&#x20;
+
+Once the results are final and often only after a jurisidiction's specific certification process, the election manager can mark results as official. All reports and result exports will then be labelled as "Official." CVRs can no longer be loaded, write-ins can no longer be adjudicated, and manual tallies can no longer be altered.
+
+There are two ways to exit official results modes:&#x20;
+
+* The system administrator may unconfigure VxAdmin entirely, removing the election configuration in addition to all tallies and adjudications.
+* The election manager may remove _all_ tallies and adjudications at once, leaving the election configuration in place.
 
 ## Printer Management
 

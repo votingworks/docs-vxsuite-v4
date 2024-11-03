@@ -20,6 +20,7 @@
     * [CDF ERR Export](system-overview/vxadmin-results-exports/cdf-err-export.md)
   * [Hardware Criticality and Supplier Analysis](system-overview/hardware-criticality-and-supplier-analysis.md)
   * [Software Overview](system-overview/software-overview.md)
+  * [Ballot Interpretation](system-overview/ballot-interpretation.md)
   * [User Roles](system-overview/user-roles.md)
   * [VxAdmin Function](system-overview/vxadmin-function.md)
   * [VxAdmin & VxCentralScan Hardware](system-overview/vxadmin-hardware.md)
