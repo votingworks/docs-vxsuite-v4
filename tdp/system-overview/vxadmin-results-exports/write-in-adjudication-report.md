@@ -18,7 +18,7 @@ The write-in adjudication report includes the results of all write-in adjudicati
 
 <figure><img src="../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>Full write-in adjudication report</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>Write-in adjudication contest results</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption><p>Write-in adjudication contest results</p></figcaption></figure>
 
 The values in the contest table above are as follows:
 
