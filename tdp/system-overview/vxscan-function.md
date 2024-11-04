@@ -42,6 +42,10 @@ Election managers normally install the thermal paper rolls via a guided flow. Th
 
 The printer roll can be loaded at any time, including when VxScan is off. It only requires opening the access door which may be sealed.
 
+{% hint style="info" %}
+**User Manual Reference:** [Printer](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxscan/election-manager-settings#printer "mention")
+{% endhint %}
+
 ### Scanner Management
 
 VxScan scans ballots with an embedded A4/Letter document scanner which produces double-sided ballot images. The application manages its transitions between hardware states (waiting, accepting, etc.) and controls when it will or will not accept ballots.
@@ -68,6 +72,10 @@ VxScan also allows poll workers to pause voting a.k.a. suspend the polls. While 
 
 If the polls have been closed, the only possible way for the polls to be re-opened is if a system administrator resets the polls to paused. Only the system administrator may do this - poll workers and election managers cannot - per the allowance in VVSG 2.0 1.1.7-E. Once polls have been reset to paused by the system administrator, voting may be resumed by a poll worker. The goal of this flow is to allow voting to continue after a poll worker has prematurely closed the polls.
 
+{% hint style="info" %}
+**User Manual Reference:** [Opening Polls](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/election-day-guides/opening-polls "mention"), [Closing Polls](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/election-day-guides/closing-polls "mention"), [Additional Poll Worker Actions](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxscan/additional-poll-worker-actions "mention")
+{% endhint %}
+
 ## Scanning
 
 Scanning can begin once VxScan is fully configured and polls are open. If any user authenticates, scanning will be disabled until they remove their card. If CVRs are not synced to the USB drive, scanning will be disabled until a sync is complete.
@@ -82,19 +90,31 @@ If the `precinctScanAdjudicationReasons` includes adjudicating unmarked write-in
 
 Once the ballot is cast, whether immediately after interpretation or after the voter confirms to cast a ballot with errors, the image and interpretation are both saved to disk and exported to the inserted USB drive as a CDF CVR. The sheet count shown on screen will increment accordingly.
 
+{% hint style="info" %}
+**User Manual Reference**: [Assisting Voters](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/election-day-guides/assisting-voters "mention")
+{% endhint %}
+
 ## Cast Vote Records
 
 VxScan exports cast vote records to the inserted USB drive continuously, after every ballot is cast, in order to avoid a lengthy export at the end of the day. All cast vote records include ballot images and images of rejected ballots are also included. If there is no USB drive in VxScan, ballots cannot be cast. If the CVRs on the USB drive are not in sync with record of ballots on disk, VxScan requires a poll worker or election manager to sync the CVRs to the USB drive. This normally occurs when a USB drive is swapped out after ballots have already been scanned.
 
 Continuous export can be disabled by an election manager if need be, for example if a USB drive turns out to be slow or no USB drive is available. If continuous export is disabled, VxScan can be used without a USB drive inserted.
 
-CVRs can be exported directly from the election manager menu, in which case they export all at once.&#x20;
+CVRs can be exported directly from the election manager menu, in which case they export all at once.
+
+{% hint style="info" %}
+**User Manual Reference**: [CVRs and Logs](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxscan/election-manager-settings#cvrs-and-logs "mention")
+{% endhint %}
 
 ## Reports
 
+On polls open, polls closed, voting paused, and voting resumed, VxScan prints a report via the thermal printer. The poll worker has the option to reprint additional report as many times as they need. The latest polls report can be cast as long as no ballots have since been cast. For example, the polls opened report can be printed as long as zero ballots have been cast. The polls closed report can be printed indefinitely, because no ballots can be cast after polls are closed. Reports will have both the timestamp of the polls transition and of the report printed, so reports printed at a later time are distinguishable.&#x20;
 
+For details about the format of the polls reports, see [vxscan-polls-reports.md](vxscan-polls-reports.md "mention").
 
+For polls opened and polls closed reports, the vote interpretations of all ballots are tallied together. In the case of polls opened reports, the tallies should always be zero forming a zero report. It is impossible to have any ballots scanned already at the time of polls are opened, because the scanner is disabled until polls are opened. Pursuant to VVSG 2.0 1.1.3-B, however, in the impossible event that non-zero totals are detected on the machine when the poll worker attempts to open the polls, an error will be presented to the poll worker and they will be unable to open the polls.&#x20;
 
+Tallies for the polls closed report are created by iterating through the data store's table of cast vote records and forming totals of votes for contest options, undervotes, overvotes, and total ballots cast. The process is the same as on VxAdmin but with far fewer steps because there are no write-in adjudication results to consider and no manual tallies. All marked write-ins are grouped as a generic "Write-In" count in reports. All unmarked write-ins are considered as undervotes.
 
-
+For voting paused and voting resumed reports, only a total ballot count is included as opposed to vote tallies.
 

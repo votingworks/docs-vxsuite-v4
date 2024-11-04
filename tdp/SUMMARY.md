@@ -27,7 +27,7 @@
   * [VxScan Function](system-overview/vxscan-function.md)
   * [VxScan Hardware](system-overview/vxscan-hardware.md)
   * [Ballot Interpretation](system-overview/ballot-interpretation.md)
-  * [Diagnostics](system-overview/diagnostics.md)
+  * [Diagnostics](system-overview/diagnostic-functions.md)
 * [System Performance & Specifications](system-performance-and-specifications.md)
 * [Software Installation](software-installation.md)
 * [System Operations & Training Manual](system-operations-and-training-manual.md)

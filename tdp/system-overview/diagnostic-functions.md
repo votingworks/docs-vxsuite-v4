@@ -1,4 +1,4 @@
-# Diagnostic Functions
+# Diagnostics
 
 All VxSuite components have a diagnostics interface accessible to system administrators and election managers that allows a user to monitor or test key components. Diagnostic information is shown to the user and can be exported as a PDF readiness report.
 
