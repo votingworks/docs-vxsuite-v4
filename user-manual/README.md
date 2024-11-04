@@ -15,7 +15,7 @@ layout:
 
 # VotingWorks
 
-This guide walks you through the complete process to set up, test, and operate the voting system on election day. If you have questions, please don't hesitate to reach out to the VotingWorks team by emailing [help@vx.support](mailto:help@vx.support) or calling **(510) 426-9991**.
+This guide walks you through the complete process to set up, test, and operate the voting system. If you have questions, please don't hesitate to reach out to the VotingWorks team by emailing [help@vx.support](mailto:help@vx.support) or calling **(510) 426-9991**.
 
 ## System Overview
 
@@ -37,8 +37,8 @@ VotingWorks Central System includes two components:
 
 VotingWorks Precinct System consists of two portable, self-contained products:
 
-1. **VxMark**: an accessible ballot marking device with a printer that produces a voter-verifiable paper ballot.
-2. **VxScan**: a voter-facing precinct scanner that scans paper ballots and notifies voters of ballot issues for second-chance voting.
+1. **VxScan**: a voter-facing precinct scanner that scans paper ballots and notifies voters of ballot issues for second-chance voting.
+2. **VxMark**: an accessible ballot marking device with a printer that produces a voter-verifiable paper ballot.
 
 Voters at the precinct vote on hand-marked paper ballots with the ability to vote on a VxMark if requested. After marking ballots, all voters scan their ballots using VxScan.
 
@@ -74,3 +74,6 @@ There are two types of VotingWorks paper ballots:
 
 </div>
 
+{% hint style="info" %}
+VotingWorks provides technical support through the email and phone number listed at the top of the page.  System maintenance, defect correction, and hardware and software upgrades are defined in the customer's contract and scheduled through VotingWorks support system.&#x20;
+{% endhint %}
