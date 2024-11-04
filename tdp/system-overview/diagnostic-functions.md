@@ -38,6 +38,26 @@ For scanners - VxScan and VxCentralScan - the currently configured mark and writ
 
 The toner level and any alerts from the printer are displayed, such as sleep mode, paper jams, or hardware malfunctions. There is an option to perform a test print, which will send a mock report to the printer. The user inspects the printed document and confirms whether the test print was successful or failed.
 
+## VxCentralScan Diagnostics
+
+### Batch Scanner
+
+The user may perform a test scan, which requires that a blank white sheet of paper be scanned. The scanned image is broken up into small cells and each cell is checked for the percent of black pixels after binarization. If that percent is more than slightly over 0%, that cell is flagged and the entire diagnostic fails. The goal of the diagnostic is catch any defects in the scanned images, such as streaking produced by a dirty scanner.
+
+<div>
+
+<figure><img src="../.gitbook/assets/3d3eeff3-0eda-48fd-be9d-8edda7abdd2d-front_debug_diagnostic.png" alt=""><figcaption><p>Passed</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/0dc29646-3c6a-4abd-9d2d-ae1b03a3b4ad-front_debug_diagnostic.png" alt=""><figcaption><p>Failed</p></figcaption></figure>
+
+</div>
+
+
+
+
+
 
 
 

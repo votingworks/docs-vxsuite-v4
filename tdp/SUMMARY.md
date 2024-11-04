@@ -23,6 +23,7 @@
   * [Ballot Interpretation](system-overview/ballot-interpretation.md)
   * [User Roles](system-overview/user-roles.md)
   * [VxAdmin Function](system-overview/vxadmin-function.md)
+  * [VxCentralScan Function](system-overview/vxcentralscan-function.md)
   * [VxAdmin & VxCentralScan Hardware](system-overview/vxadmin-hardware.md)
   * [Diagnostic Functions](system-overview/diagnostic-functions.md)
 * [System Performance & Specifications](system-performance-and-specifications.md)

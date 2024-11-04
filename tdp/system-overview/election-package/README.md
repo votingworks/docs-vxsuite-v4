@@ -105,13 +105,17 @@ The system settings file contains settings which are not specific to an election
     "startingCardLockoutDurationSeconds": 15
   },
   "markThresholds": {
-    "marginal": 0.05,
     "definite": 0.07,
     "writeInTextArea": 0.05
   },
   "centralScanAdjudicationReasons": [],
   "precinctScanAdjudicationReasons": [],
-  "precinctScanDisallowCastingOvervotes": false
+  "disallowCastingOvervotes": false,
+  "allowOfficialBallotsInTestMode": false,
+  "precinctScanEnableShoeshineMode": false,
+  "castVoteRecordsIncludeOriginalSnapshots": true,
+  "castVoteRecordsIncludeRedundantMetadata": false,
+  "disableVerticalStreakDetection": false
 }
 ```
 
@@ -123,12 +127,17 @@ The system settings file contains settings which are not specific to an election
   * `startingCardLockoutDurationSeconds` - Sets the number of seconds that the user is locked out from retrying a PIN after the number of failed attempts specified by  `numIncorrectPinAttemptsAllowedBeforeCardLockout`. Each subsequent failed attempt triggers a lockout double the length of the previous lockout.
 * Scanning Thresholds
   * `definite` - Specifies the percentage of a bubble that needs to be filled in for the tabulators to consider it a mark.
-  * `marginal` - Specifies the percentage of a bubble that needs to be filled in for the tabulators to consider it a marginal mark.
   * `writeInTextArea` - Specifies the percentage of the write-in area that needs to be filled in for the tabulators to consider it a write-in. This is only relevant for jurisdictions that allow unmarked write-ins i.e write-ins without an accompanying mark.
 * Adjudication Reasons
   * `precinctScanAdjudicationReasons` - Specifies the reasons that a ballot should be labelled as needing later adjudication at VxScan. Supported reasons are overvotes, undervotes, blank ballots, or unmarked write-ins.&#x20;
   * `centralScanAdjudicationReasons` - Specifies the reasons that a ballot should be labelled as needing later adjudication at VxCentral. Supported reasons are overvotes, undervotes, blank ballots, or unmarked write-ins.&#x20;
-  * `precinctScanDisallowCastingOvervotes` - When set to `false`, an overvoted ballot on VxScan will trigger an onscreen prompt from which the voter has the option to cast their ballot with the overvote. When set to `true`, overvoted ballots are always rejected and cannot be cast.
+  * `disallowCastingOvervotes` - When set to `false`, an overvoted ballot can be tabulated after confirmation by the voter or election manager. When set to `true`, overvoted ballots are always rejected and cannot be cast.
+  * `allowOfficialBallotsInTestMode` - When set to `true`, official ballots will not be rejected in test mode. The setting is for jurisdictions where testing must take place on official ballots.
+* Other
+  * `precinctScanEnableShoeshineMode` -&#x20;
+  * `castVoteRecordsIncludeOriginalSnapshots` -&#x20;
+  * `castVoteRecordsIncludeRedundantMetadata` -&#x20;
+  * `disableVerticalStreakDetection` -&#x20;
 
 ### Metadata
 
