@@ -4,14 +4,14 @@
 
 ## VxAdmin System Setup
 
-* [VxAdmin Hardware Setup](../vxadmin-system-setup/vxadmin-hardware-setup.md)
-* [Configure VxAdmin](../vxadmin-system-setup/configure-vxadmin.md)
-* [Setting Date & Time](../vxadmin-system-setup/setting-date-and-time.md)
+* [VxAdmin Hardware Setup](vxadmin-system-setup/vxadmin-hardware-setup.md)
+* [Configure VxAdmin](vxadmin-system-setup/configure-vxadmin.md)
+* [Setting Date & Time](vxadmin-system-setup/setting-date-and-time.md)
 * [Diagnostics  VxAdmin](vxadmin-system-setup/diagnostics-vxadmin.md)
-* [Smartcards and User Roles](../vxadmin-system-setup/programming-cards.md)
-* [USB Formatting](../vxadmin-system-setup/usb-formatting.md)
-* [Save Election Package](../vxadmin-system-setup/save-election-package.md)
-* [Unlocking/Locking Hardware](../vxadmin-system-setup/unlocking-locking-hardware.md)
+* [Smart Cards and User Roles](vxadmin-system-setup/programming-cards.md)
+* [USB Formatting](vxadmin-system-setup/usb-formatting.md)
+* [Save Election Package](vxadmin-system-setup/save-election-package.md)
+* [Unlocking/Locking Hardware](vxadmin-system-setup/unlocking-locking-hardware.md)
 
 ## VxScan
 
@@ -37,11 +37,11 @@
 
 ## Election Night Guides
 
-* [Tally Results](../election-night-guides/tally-results.md)
-* [Write-In Adjudication](../election-night-guides/write-in-adjudication.md)
-* [Manual Tallies](../election-night-guides/manual-tallies.md)
-* [Reports](../election-night-guides/reports.md)
-* [Mark Results as Official](../election-night-guides/mark-results-as-official.md)
+* [Loading CVRs](election-night-guides/tally-results.md)
+* [Write-In Adjudication](election-night-guides/write-in-adjudication.md)
+* [Manual Tallies](election-night-guides/manual-tallies.md)
+* [Reports](election-night-guides/reports.md)
+* [Mark Results as Official](election-night-guides/mark-results-as-official.md)
 
 ## After Election Night
 

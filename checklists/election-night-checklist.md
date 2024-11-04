@@ -1,10 +1,10 @@
 # Election Night Checklist
 
-On election night, you will need [VxAdmin](../vxadmin-system-setup/vxadmin-hardware-setup.md) (laptop and printer). If scanning ballots centrally, you'll also need the [VxCentralScan](../vxcentralscan/vxcentralscan-hardware-setup.md) (laptop and scanner) and the [Election Night Checklist - VxCS](../vxcentralscan/election-night-checklist-vxcs.md).
+On election night, you will need [VxAdmin](../user-manual/vxadmin-system-setup/vxadmin-hardware-setup.md) (laptop and printer). If scanning ballots centrally, you'll also need the [VxCentralScan](../vxcentralscan/vxcentralscan-hardware-setup.md) (laptop and scanner) and the [Election Night Checklist - VxCS](../vxcentralscan/election-night-checklist-vxcs.md).
 
-### [Tallying](../election-night-guides/tally-results.md) and Saving Results
+### [Tallying](../user-manual/election-night-guides/tally-results.md) and Saving Results
 
-* [ ] [set up VxAdmin](../vxadmin-system-setup/vxadmin-hardware-setup.md)
+* [ ] [set up VxAdmin](../user-manual/vxadmin-system-setup/vxadmin-hardware-setup.md)
 * [ ] insert Election Manager Card
 * [ ] select Tally from the side menu and verify there are no CVRs on VxAdmin&#x20;
 * [ ] select Reports from the side menu, print an _`Unofficial Full Election Tally Report`_ as the Zero Report

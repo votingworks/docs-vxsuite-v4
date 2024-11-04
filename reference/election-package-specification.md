@@ -1,6 +1,6 @@
 # Election Package Specification
 
-VxAdmin is configured with an election package (see [configure-vxadmin.md](../vxadmin-system-setup/configure-vxadmin.md "mention")), which specifies the details of the election as well as various settings for the system. This page documents the format of the election package.
+VxAdmin is configured with an election package (see [configure-vxadmin.md](../user-manual/vxadmin-system-setup/configure-vxadmin.md "mention")), which specifies the details of the election as well as various settings for the system. This page documents the format of the election package.
 
 ## Overview
 
