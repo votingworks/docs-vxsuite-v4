@@ -56,7 +56,7 @@ Now that the interpreter can inspect the locations of all ballot bubbles to see 
 
 <figure><img src="../.gitbook/assets/0db947fd-eb05-4ccb-8c09-ad7aee2e6564-front_debug_scored_bubble_marks.png" alt="" width="375"><figcaption><p>Ballot bubble scores</p></figcaption></figure>
 
-The bubble scores are later compared against the definite mark threshold in the system settings and used to determine whether the voter made an indication that should be counted. The recommended default threshold is 7%. Setting too low of a threshold may result in stray marks or ballot folds to be considered as marks. Setting too high of a threshold may result in reasonable voter marks not being detected. While ballot instructions should recommend voters fully fill in the bubbles, at a threshold of 7% the system will detect most marks.&#x20;
+The bubble scores are later compared against the definite mark threshold in the system settings and used to determine whether the voter made an indication that should be counted. The recommended default threshold is 7%. Setting too low of a threshold may result in stray marks or ballot folds to be considered as marks. Setting too high of a threshold may result in reasonable voter marks not being detected. While ballot instructions should recommend voters fully fill in the bubbles, at a threshold of 7% the system will detect most voter marks that pass through the bubble.
 
 <div>
 
