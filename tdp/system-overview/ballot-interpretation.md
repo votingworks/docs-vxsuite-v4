@@ -52,7 +52,7 @@ Next the interpreter will search the bottom left and top right corners of the im
 
 The QR code includes ballot metadata - precinct, ballot style, election hash, ballot mode - but no vote information (see [hand-marked-ballots.md](hand-marked-ballots.md "mention")). Up until now, the two sides of a ballot have been interpreted in parallel. At this point, the QR code metadata on the front and back are compared to ensure that they match to form a valid ballot. The ballot information from the QR code indicates which ballot layout from the election definition that the ballot conforms to, including the position of all the bubbles, contests, and write-in areas.
 
-Now that the interpreter can inspect the locations of all ballot bubbles to see how filled they are. Each bubble is compared with a bubble template to distinguish voter marks from the bubble itself and is scored accordingly. And empty bubble would be near, but not exactly at 0%.&#x20;
+Now that the interpreter can inspect the locations of all ballot bubbles to see how filled they are. Note that bubbles are not necessarily aligned with timing marks because they can be defined in fractional grid coordinates. Each bubble is compared with a bubble template to distinguish voter marks from the bubble itself and is scored accordingly. An empty bubble would receive close to, but not exactly, a 0% score.&#x20;
 
 <figure><img src="../.gitbook/assets/0db947fd-eb05-4ccb-8c09-ad7aee2e6564-front_debug_scored_bubble_marks.png" alt="" width="375"><figcaption><p>Ballot bubble scores</p></figcaption></figure>
 
