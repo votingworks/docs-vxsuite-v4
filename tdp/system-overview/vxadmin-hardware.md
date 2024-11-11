@@ -1,6 +1,6 @@
 # VxAdmin & VxCentralScan Hardware
 
-## Overview
+## Functional Overview
 
 \[insert images and explanations]
 
