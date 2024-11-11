@@ -8,7 +8,7 @@ When a test is performed, the system logs the result and creates a diagnostic re
 
 ### Storage
 
-Retrieves the current amount of disk space used and disk space available for the application. The displayed total disk space will not be as large as the actual disk because some space is reserved for the system. The disk space usage will not always return to 0% after clearing election data because the database may not have liberate that disk space back to the operating system, but the space will be reused once more election data is loaded.
+Retrieves the current amount of disk space used and disk space available for the application. The displayed total disk space will not be as large as the actual disk because some space is reserved for the system. The disk space usage will not always return to 0% after clearing election data because the database may not have liberated that disk space back to the operating system, but the space will be reused once more election data is loaded.
 
 ### Battery
 
@@ -22,7 +22,7 @@ If there is an election configured on the machine, it will display the election 
 
 #### Ballot Styles
 
-For precinct equipment, the list of ballot styles will include only those appropriate for the current precinct configuration. For central equipment, the list of ballot styles will be all ballot styles in the election. The languages for each ballot style are also enumerated
+For precinct equipment, the list of ballot styles will include only those appropriate for the current precinct configuration. For central equipment, the list of ballot styles will be all ballot styles in the election. The languages for each ballot style are also enumerated.
 
 #### Precinct
 
