@@ -2,37 +2,11 @@
 
 VxScan is the system's precinct scanner into which voters cast their ballots directly.
 
-## Configuration
-
-VxScan is configured with a signed [election package](election-package/#election-definition) exported from VxAdmin. The election definition includes the ballot layouts necessary for interpreting ballots and the system settings which indicate what type of ballot issues (e.g. overvotes) require adjudication.&#x20;
-
-{% hint style="info" %}
-**User Manual Reference:** [Configure VxScan](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxscan/configure-vxscan "mention")
-{% endhint %}
-
-### Precinct Selection
-
-VxScan is not fully configured until the election manager selects a precinct for the device. When polls are open, VxScan will only accept ballots for the configured precinct. If ballots for other precincts are cast, they will be rejected. The election manager may configure VxScan to "All Precincts" in which case ballots for all precincts will be accepted.&#x20;
-
-If the election definition only has one precinct, the precinct will be automatically selected and the precinct will not be editable.
-
-Once polls are opened and ballots are cast, the precinct can no longer be changed. If polls are opened but ballots have not yet been cast, the precinct can still be changed but it will result in the polls resetting to closed. Resetting the polls to closed forces a poll worker to re-open the polls, which reprints the polls opened report with the new, correct precinct configuration.
-
-### Ballot Mode
-
-After initial configuration, VxScan is in test ballot mode. The election manager can toggle between test ballot mode and official ballot mode. In official ballot mode, only official ballots can be scanned and exported CVRs will be official ballot CVRs. In test ballot mode, only test ballots can be scanned and exported CVRs will be test ballot CVRs. If `allowOfficialBallotsInTestMode` is set in the [system settings](election-package/#system-settings), official ballots will be allowed in test mode but exported CVRs will still be test CVRs.
-
-Switching between ballot modes clears all scanned ballot data and resets the polls to closed. The election manager can switch from test ballot mode to official ballot mode at any time. When in official ballot mode after ballots have been scanned, the election manager can only switch back to test ballot mode if the CVRs have been synced to the USB drive.
-
-### Unconfiguring
-
-VxScan can be unconfigured by an election manager or system administrator. If ballots have been scanned in official ballot mode, an election manager can only unconfigure the machine after scanned ballot data has synced to a USB drive. System administrators can unconfigure the machine at any time.
-
 ## Hardware Management
 
 ### Printer Management
 
-VxScan includes an embedded A4 thermal roll printer which is used to print polls reports. The application is regularly polling the printer for status, which is one of the following:
+VxScan includes an embedded A4 thermal roll printer which is used to print polls reports. The application communicates with the printer via a driver written in-house by VotingWorks. The application is regularly polling the printer for status, which is one of the following:
 
 <table><thead><tr><th width="172">Status</th><th width="282">Meaning</th><th>Effect</th></tr></thead><tbody><tr><td>Ready</td><td>Platen is attached and paper is detected</td><td>Application may print normally</td></tr><tr><td>No Paper</td><td>Platen is attached but no paper is detected</td><td>Printing disabled. A warning will be shown on poll worker screens. </td></tr><tr><td>Cover Open</td><td>Platen is not attached</td><td>Printing disabled. If the polls are open, a warning will be shown.</td></tr><tr><td>Error</td><td>Most likely the printhead has overheated, but other hardware errors are possible. Details available in diagnostics interface.</td><td>Printing disabled. Poll workers will not be able to operate the polls, but election managers and system administrators can still authenticate for diagnostics.</td></tr></tbody></table>
 
@@ -48,7 +22,7 @@ The printer roll can be loaded at any time, including when VxScan is off. It onl
 
 ### Scanner Management
 
-VxScan scans ballots with an embedded A4/Letter document scanner which produces double-sided ballot images. The application manages its transitions between hardware states (waiting, accepting, etc.) and controls when it will or will not accept ballots.
+VxScan scans ballots with an embedded A4/Letter document scanner which produces double-sided ballot images. The application communicates with the scanner through a driver written in-house by VotingWorks. The application sends and receives events to and from the driver, managing its transitions between scanning states (waiting, accepting, etc.) and controlling when it will or will not accept ballots.
 
 The embedded scanner includes a multi-sheet detector (MSD) which allows the application to reject cases of voters feeding in multiple ballots at a time. The multi-sheet detection must be calibrated at the beginning of an election based on the thickness of the ballot paper. The double sheet detection calibration flow is exposed in the election manager menu. The election manager can choose to disable double sheet detection, but it is enabled by default.
 
@@ -57,6 +31,34 @@ The scanner's cover can be opened for cleaning, during which scanning will be di
 ### Audio Management
 
 VxScan makes noises whenever a ballot is accepted or rejected. The ballot accepted sound is a pleasant chime and the ballot rejected sound is a jarring beep. Election managers can toggle sounds on or off.
+
+## Configuration
+
+VxScan is configured with a signed [election package](election-package/#election-definition) exported from VxAdmin. The election definition includes the ballot layouts necessary for interpreting ballots and the system settings which indicate what type of ballot issues (e.g. overvotes) require adjudication.&#x20;
+
+{% hint style="info" %}
+**User Manual Reference:** [Configure VxScan](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxscan/configure-vxscan "mention")
+{% endhint %}
+
+### Precinct Selection
+
+VxScan is not fully configured until the election manager selects a precinct for the device. When polls are open, VxScan will only accept ballots for the configured precinct. If ballots for other precincts are cast, they will be rejected. The election manager may configure VxScan to "All Precincts" in which case ballots for all precincts will be accepted.&#x20;
+
+If the election definition only has one precinct, the precinct will be automatically selected.
+
+Once polls are opened and ballots are cast, the precinct can no longer be changed. If polls are opened but ballots have not yet been cast, the precinct can still be changed but it will result in the polls resetting to closed. Resetting the polls to closed forces a poll worker to re-open the polls, which reprints the polls opened report with the new, correct precinct configuration.
+
+### Ballot Mode
+
+After initial configuration, VxScan is in test ballot mode. The election manager can toggle between test ballot mode and official ballot mode. In official ballot mode, only official ballots can be scanned and exported CVRs will be official ballot CVRs. In test ballot mode, only test ballots can be scanned and exported CVRs will be test ballot CVRs. If `allowOfficialBallotsInTestMode` is set in the [system settings](election-package/#system-settings), official ballots will be allowed in test mode but exported CVRs will still be test CVRs.
+
+Switching between ballot modes clears all scanned ballot data and resets the polls to closed. The election manager can switch from test ballot mode to official ballot mode at any time. When in official ballot mode after ballots have been scanned, the election manager can only switch back to test ballot mode if the CVRs have been synced to the USB drive.
+
+### Unconfiguring
+
+VxScan can be unconfigured by an election manager or system administrator. If ballots have been scanned in official ballot mode, an election manager can only unconfigure the machine after scanned ballot data has synced to a USB drive. System administrators can unconfigure the machine at any time.
+
+
 
 ## Polls Management
 
@@ -93,6 +95,16 @@ Once the ballot is cast, whether immediately after interpretation or after the v
 {% hint style="info" %}
 **User Manual Reference**: [Assisting Voters](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/election-day-guides/assisting-voters "mention")
 {% endhint %}
+
+The voter interface can be tuned to be more accessible to different voters:&#x20;
+
+* Text size can be adjusted to four different sizes (VVSG 2.0 7.1-G)
+* Contrast mode can be adjusted from the default medium contrast (VVSG 2.0 7.1-C) to a high-contrast white background, high contrast black background, or low contrast (VVSG 2.0 7.1-D)
+* Language can be adjusted to any language supported by the election package
+
+The election package's [app strings](election-package/#app-strings) file specifies the translations that will be used to replace all on screen voter messages when the language is switched.
+
+After the voter casts their ballots, settings will automatically reset to the default (VVSG 2.0 7.1-A). There is also a voter option to reset settings (VVSG 2.0 7.1-B).
 
 ## Cast Vote Records
 
