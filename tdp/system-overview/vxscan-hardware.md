@@ -106,7 +106,7 @@ Poll workers will normally not have to interface with any parts of the scanner t
 
 </div>
 
-## Scanner Inner Structure
+## Scanner Internals
 
 The various components of the scanner are arranged and wired together within the Pelican case. Custom cut holes in the Pelican case allow mounting brackets in the top and bottom tubs which are then used to attach components.
 
