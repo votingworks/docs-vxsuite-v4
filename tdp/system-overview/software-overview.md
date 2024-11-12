@@ -111,13 +111,8 @@ All machines allow system administrators and election managers to edit the date,
 **User Manual Reference**: [Setting Date & Time](https://app.gitbook.com/s/JtZutzGTdCzsGITrdiph/vxadmin-system-setup/setting-date-and-time "mention")
 {% endhint %}
 
+### Other
 
-
-
-
-
-
-
-
-
+* [ballot-interpretation.md](ballot-interpretation.md "mention")
+* [diagnostic-functions.md](diagnostic-functions.md "mention")
 

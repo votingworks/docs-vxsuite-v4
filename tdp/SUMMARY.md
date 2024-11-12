@@ -27,6 +27,7 @@
   * [VxScan Function](system-overview/vxscan-function.md)
   * [VxScan Hardware](system-overview/vxscan-hardware.md)
   * [VxMark Function](system-overview/vxmark-function.md)
+  * [VxMark Hardware](system-overview/vxmark-hardware.md)
   * [Ballot Interpretation](system-overview/ballot-interpretation.md)
   * [Diagnostics](system-overview/diagnostic-functions.md)
 * [System Performance & Specifications](system-performance-and-specifications.md)

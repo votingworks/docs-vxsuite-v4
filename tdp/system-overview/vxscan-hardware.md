@@ -106,9 +106,41 @@ Poll workers will normally not have to interface with any parts of the scanner t
 
 </div>
 
+## Scanner Inner Structure
+
+The various components of the scanner are arranged and wired together within the Pelican case. Custom cut holes in the Pelican case allow mounting brackets in the top and bottom tubs which are then used to attach components.
+
+Power enters through a power module embedded in the case. The power module connects to a 24-volt power supply which supplies the scanner and printer with power. A 12-volt power supply is daisy-chained from the 24-volt power supply in order to power the single board computer.&#x20;
+
+The metal chassis of the bottom tub is grounded to exterior ground via the power module. Everything else requiring grounding is then grounded to the bottom chassis - power supply, lid chassis, access panel, and the scanner.
+
+All USB cables ultimately connect to the single board computer. The card reader and printer connect via a custom USB cable directly to headers on the computer. The USB hub, which then connects to the USB ports and scanner, is connected directly to the computer. Finally, a USB-C cable connects the computer to the screen. The USB-C cable carries video, audio, touch input, and power. Audio is carried through the screen to the speakers via a separate cable.
+
+The wiring digram below outlines the power and data connections within the scanner. Black lines indicate power connections, gray lines indicate ground connections, and purple lines indicate data connections, which may also carry low voltage power.
+
+<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+
 ## COTS Components
 
+VxScan includes many COTS components, which mostly fall into two categories. First, many small pieces of hardware such as fasteners are purchased commercially. These are called out in the bill of materials and are not generally critical components. Second, most of the electronic components are purchased commercially. Documentation for these components can be found in [the documentation repository](https://github.com/votingworks/vxsuite-v4-documentation/tree/main/hardware-assets/cots-documentation/scan).&#x20;
 
+<table><thead><tr><th width="176">Manufacturer</th><th width="225">Component</th><th width="197">Mfr. Part Number</th><th>Criticality</th></tr></thead><tbody><tr><td>Peripheral Dynamics, Inc.</td><td>PageScan 6 Scanner</td><td>PS6</td><td>High</td></tr><tr><td>USBFirewire</td><td>10" USB A-B Cable</td><td>RR-ADBU-10GR</td><td>Medium</td></tr><tr><td>L-com</td><td>0.5m USB A-B Cable</td><td>CAABLK-90RB-05M</td><td>Medium</td></tr><tr><td>GlobTek, Inc.</td><td>USB-C Cable</td><td>USBCW1M0USBC2SLEMBK</td><td>Medium</td></tr><tr><td>HID Omnikey</td><td>Embedded Smart Card Reader</td><td>R31210375-1</td><td>Medium</td></tr><tr><td>Aaeon</td><td>Single-Board Computer</td><td>UPN-ADLN97-A10-0864</td><td>High</td></tr><tr><td>ADATA</td><td>Solid-State Drive</td><td>IM2P32A8-128GCTB5</td><td>High</td></tr><tr><td>Tripp Lite</td><td>USB Panel Mount</td><td>U324-001-APM</td><td>Medium</td></tr><tr><td>CUI Devices</td><td>Power Cable</td><td>AC-C13 NA</td><td>Low</td></tr><tr><td>MEAN WELL</td><td>12V Power Supply</td><td>LRS-75-12</td><td>Medium</td></tr><tr><td>MEAN WELL</td><td>24V Power Supply</td><td>LRS-150-24</td><td>Medium</td></tr><tr><td>Fujitsu</td><td>A4 Thermal Printer Mechanism</td><td>FTP-68EMCL112-R</td><td>High</td></tr><tr><td>Fujitsu</td><td>A4 Thermal Printer Control Board</td><td>FTP-62EDSL201-R</td><td>High</td></tr><tr><td>Fujitsu</td><td>A4 Thermal Printer Head Cable</td><td>FTP-62EY001-R</td><td>Medium</td></tr><tr><td>Coolgear</td><td>USB Hub</td><td>CG-3510S4-BOARD</td><td>Medium</td></tr><tr><td>Pelican</td><td>Outer Case</td><td>Pelican Air 1485</td><td>Medium</td></tr><tr><td>Elo</td><td>Touchscreen</td><td>E976783</td><td>Medium</td></tr></tbody></table>
+
+## Discussion of Critical Components
+
+As listed in the COTS table above, the high criticality components are as follows:
+
+* **Aaeon UP Squared Pro 7000 Computer** - As the computer which orchestrates ballot interpretation and vote tallying, the single board computer is a highly critical component. VotingWorks partners with Aaeon, Inc. and their production in Taiwan to ensure the trustworthy production and quality of each single board computer.
+* **PageScan 6 Scanner** - As the source of ballot images for interpretation, the embedded scanner is a highly critical component. Any interference in image creation could affect interpretation and subsequently vote tallies. Any interference in paper handling could affect ballot accounting. VotingWorks works closely with Peripheral Dynamics, Inc. to ensure the quality of the hardware and firmware of the scanner manufactured domestically.
+* **Fujitsu Thermal Printer Mechanism and Control Board -** The thermal printer is a less sensitive component than the previous two because it does not send sensitive data to the application - it only receives sensitive data. It is still a single-sourced component with complex subassemblies, however, and any issues printing would prevent jurisdictions from having accurate day-end results.
+* **Solid State Drive -** The solid state drive is the storage medium for all sensitive election data
+
+The medium criticality components and the reasons for their classification are as follows:
+
+* **USB Cables, Hub, and Mounts -** USB cables connect to the computer and carry sensitive election data, so they are minimum criticality. The attack vectors are difficult, however, and all cables can be produced by alternate manufacturers.
+* **Power Cables & Power Supplies** - Power supplies and cables can affect the reliability of the equipment in initially difficult to detect ways, and are thus medium criticality, but they generally cannot corrupt election data in a targeted or undetectable way.
+* **Pelican Case** - The Pelican case cannot meaningfully affect the operation of the equipment, but its sole supplier is Pelican. Since the equipment is designed around the particular case, the case and its supplier are considered critical.&#x20;
+* **Touchscreen -** The Elo touchscreen is responsible for rendering election data and correctly handling user touches, but it generally cannot impact election data and impacts would be perceptible. It is custom component from a single manufacturer, however, and is certainly medium criticality.
 
 
 
