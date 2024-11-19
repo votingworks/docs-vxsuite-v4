@@ -118,7 +118,39 @@ All USB cables ultimately connect to the single board computer. The card reader 
 
 The wiring digram below outlines the power and data connections within the scanner. Black lines indicate power connections, gray lines indicate ground connections, and purple lines indicate data connections, which may also carry low voltage power.
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption><p>VxScan Wiring Diagram</p></figcaption></figure>
+
+<div>
+
+<figure><img src="../.gitbook/assets/internals.png" alt="" width="563"><figcaption><p>Wiring components</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/IMG_1611.jpg" alt="" width="375"><figcaption><p>Voltage warning over power supplies</p></figcaption></figure>
+
+</div>
+
+To prevent access to internals, VotingWorks installs three seals over screws holding the metal panels in place - one on the bottom left panel covering the computer, one on the bottom right panel covering the power supplies, and one on the top panel holding the display in place. These seals are installed at the factory and are intended to be permanent aside from when panels need to be opened for repairs.
+
+<div>
+
+<figure><img src="../.gitbook/assets/PXL_20241115_211101998.jpg" alt="" width="375"><figcaption><p>Bottom left panel seal</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/PXL_20241115_211107051.jpg" alt="" width="375"><figcaption><p>Bottom right panel seal</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/PXL_20241115_211114764.jpg" alt="" width="563"><figcaption><p>Top panel seal</p></figcaption></figure>
+
+</div>
+
+### Paper Path
+
+<figure><img src="../.gitbook/assets/paper_path.png" alt=""><figcaption></figcaption></figure>
+
+The paper path is carefully designed and tested to ensure a smooth and uninterrupted ballot scan and deposit. The voter inserts paper over the infeed which mates directly with the scanner.  The scanner lid handle doubles as an upper deflector, deflecting ballots which are inserted too high by the voter. As the ballot passes through the scanner, it hits the ballot redirector behind the scanner. The ballot redirector is a logarithmic curve which ensures that wherever the ballot strikes, it will be directed downward. The ballot then passes through the outfeed slot (which is only open when the scanner case is open) into the ballot box.
 
 ## COTS Components
 
@@ -131,18 +163,13 @@ VxScan includes many COTS components, which mostly fall into two categories. Fir
 As listed in the COTS table above, the high criticality components are as follows:
 
 * **Aaeon UP Squared Pro 7000 Computer** - As the computer which orchestrates ballot interpretation and vote tallying, the single board computer is a highly critical component. VotingWorks partners with Aaeon, Inc. and their production in Taiwan to ensure the trustworthy production and quality of each single board computer.
-* **PageScan 6 Scanner** - As the source of ballot images for interpretation, the embedded scanner is a highly critical component. Any interference in image creation could affect interpretation and subsequently vote tallies. Any interference in paper handling could affect ballot accounting. VotingWorks works closely with Peripheral Dynamics, Inc. to ensure the quality of the hardware and firmware of the scanner manufactured domestically.
+* **PageScan 6 Scanner** - As the source of ballot images for interpretation, the embedded scanner is a highly critical component. Any interference in image creation could affect interpretation and subsequently vote tallies. Any interference in paper handling could affect ballot accounting. VotingWorks works closely with Peripheral Dynamics, Inc. to ensure the quality of the hardware and firmware of the scanner manufactured domestically. The specific VotingWorks firmware version is tracked by Peripheral Dynamics, Inc. and installed on all scanners.&#x20;
 * **Fujitsu Thermal Printer Mechanism and Control Board -** The thermal printer is a less sensitive component than the previous two because it does not send sensitive data to the application - it only receives sensitive data. It is still a single-sourced component with complex subassemblies, however, and any issues printing would prevent jurisdictions from having accurate day-end results.
-* **Solid State Drive -** The solid state drive is the storage medium for all sensitive election data
+* **Solid State Drive -** The solid state drive is the storage medium for all sensitive election data.
 
 The medium criticality components and the reasons for their classification are as follows:
 
-* **USB Cables, Hub, and Mounts -** USB cables connect to the computer and carry sensitive election data, so they are minimum criticality. The attack vectors are difficult, however, and all cables can be produced by alternate manufacturers.
+* **USB Cables, Hub, and Mounts -** USB cables connect to the computer and carry sensitive election data, so they are medium criticality. The attack vectors are difficult, however, and all cables can be produced by alternate manufacturers.
 * **Power Cables & Power Supplies** - Power supplies and cables can affect the reliability of the equipment in initially difficult to detect ways, and are thus medium criticality, but they generally cannot corrupt election data in a targeted or undetectable way.
-* **Pelican Case** - The Pelican case cannot meaningfully affect the operation of the equipment, but its sole supplier is Pelican. Since the equipment is designed around the particular case, the case and its supplier are considered critical.&#x20;
+* **Pelican Case** - The Pelican case cannot meaningfully affect the operation of the software, but its sole supplier is Pelican. Since the equipment is designed around the particular case, the case and its supplier are considered critical.&#x20;
 * **Touchscreen -** The Elo touchscreen is responsible for rendering election data and correctly handling user touches, but it generally cannot impact election data and impacts would be perceptible. It is custom component from a single manufacturer, however, and is certainly medium criticality.
-
-
-
-
-
