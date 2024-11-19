@@ -1,2 +1,0 @@
-# VxMark Hardware
-

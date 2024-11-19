@@ -1,2 +1,0 @@
-# System Operations & Training Manual
-

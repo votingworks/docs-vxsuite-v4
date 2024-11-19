@@ -1,2 +1,0 @@
-# Usability & Accessibility
-
