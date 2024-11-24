@@ -9,7 +9,8 @@ PDF versions of these documents are available by clicking `Export as PDF` at the
 
 A search feature is also available for these hosted documents by clicking `Ask or search` or `ctrl-K` when viewing the documentation. You can search for a given section of the documentation or ask a question in natural language and receive an AI summarized answer based on the documentation content.
 
-## TDP Asset Folder Descriptions
+## Folder Descriptions
+- `conformity-matrix` contains a matrix of each VVSG2 requirement in a .xlsx file with a brief description of how VxSuite meets the requirement, how VotingWorks tests meeting the requirement, and a reference to where in the TDP there is more documentation supporting this requirement.
 - `hardware-assets/`
   - `cots-documentation/` contains all of the data sheets for COTS products used in the system
 - `quality-assurance/` contains documents used in VotingWorks internal QA
