@@ -1,8 +1,9 @@
 # docs-vxsuite-v4
 
 ## Submodule Descriptions
-- `docs-vxsuite-v4-tdp` syncs the content of the VxSuite TDP that is publicly avialable at: https://docs.voting.works/vxsuite-tdp-v4
-- `docs-vxsuite-v4-user-manual` syncs the content of the VxSuite User Manual that is publicly available at: https://docs.voting.works/vxsuite-user-manual-v4
+`docs-vxsuite-v4-tdp` syncs the content of the VxSuite TDP that is publicly avialable at: https://docs.voting.works/vxsuite-tdp-v4
+
+`docs-vxsuite-v4-user-manual` syncs the content of the VxSuite User Manual that is publicly available at: https://docs.voting.works/vxsuite-user-manual-v4
 
 PDF versions of these documents are available by clicking `Export as PDF` at their respective links. Click `All pages` for the entirety of the documentation.
 
