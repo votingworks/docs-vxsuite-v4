@@ -15,7 +15,6 @@ A search feature is also available for these hosted documents by clicking `Ask o
   - `BOMs/` contains the detailed Bill of Materials for each component in the system
   - `cots-documentation/` contains all of the data sheets for COTS products used in the system
   - `drawings/` contains all of the mechanical drawings for manufactured parts in the system
-  - `tests/` contains all of the internal and external testing done on the system
   - `workplans` contains detailed instructions for assembling the system
 - `quality-assurance/` contains documents used in VotingWorks internal QA
 - `risk-assessment/` contains a risk assessment for the voting system per VVSG 14.1
