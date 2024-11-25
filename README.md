@@ -12,6 +12,10 @@ A search feature is also available for these hosted documents by clicking `Ask o
 ## Folder Structure
 - `conformity-matrix/` contains a matrix of each VVSG2 requirement in a .xlsx file with a brief description of how VxSuite meets the requirement, how VotingWorks tests meeting the requirement, and a reference to where in the TDP there is more documentation supporting this requirement.
 - `hardware-assets/`
+  - `BOMs/` contains the detailed Bill of Materials for each component in the system
   - `cots-documentation/` contains all of the data sheets for COTS products used in the system
+  - `drawings/` contains all of the mechanical drawings for manufactured parts in the system
+  - `tests/` contains all of the internal and external testing done on the system
+  - `workplans` contains detailed instructions for assembling the system
 - `quality-assurance/` contains documents used in VotingWorks internal QA
 - `warranty-model/` contains a copy of the VotingWorks service contract
