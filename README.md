@@ -18,4 +18,6 @@ A search feature is also available for these hosted documents by clicking `Ask o
   - `tests/` contains all of the internal and external testing done on the system
   - `workplans` contains detailed instructions for assembling the system
 - `quality-assurance/` contains documents used in VotingWorks internal QA
+- `risk-assessment/` contains a risk assessment for the voting system per VVSG 14.1
+- `uat-reports/` contains the voter and poll worker reports from usability and accessibility testing
 - `warranty-model/` contains a copy of the VotingWorks service contract
