@@ -2,15 +2,16 @@
 
 ## Repository Structure
 - `conformity-matrix/` contains a matrix of each VVSG2 requirement with a brief description of how VxSuite meets the requirement, how VotingWorks tests meeting the requirement, and a reference to where to find more documentation supporting this requirement in the Technical Data Package (TDP).
-- `docs-vxsuite-v4-tdp` is a submodule that syncs the content of the VxSuite TDP that is publicly avialable at: https://docs.voting.works/vxsuite-tdp-v4
-- `docs-vxsuite-v4-user-manual` is a submodule the content of the VxSuite User Manual that is publicly available at: https://docs.voting.works/vxsuite-user-manual-v4
+- `docs-vxsuite-v4-tdp` is a submodule containing the content of the VxSuite TDP that is publicly avialable at: https://docs.voting.works/vxsuite-tdp-v4
+- `docs-vxsuite-v4-user-manual` is a submodule containing the of the VxSuite User Manual that is publicly available at: https://docs.voting.works/vxsuite-user-manual-v4
 - `hardware-assets/`
   - `BOMs/` contains the detailed Bill of Materials for each component in the system
   - `cots-documentation/` contains all of the data sheets for COTS products used in the system
   - `drawings/` contains all of the mechanical drawings for manufactured parts in the system
   - `workplans/` contains detailed instructions for assembling the system
-- `quality-assurance/` contains documents used in VotingWorks internal QA
-  - `testing` contains test results for the system performed by either external bodies or by VotingWorks
+- `quality-assurance/` contains documents used in the VotingWorks quality assurance process
+  - `production/` contains QA documentation used in voting system component production
+  - `testing/` contains test results for the system performed by either external bodies or by VotingWorks
 - `risk-assessment/` contains a risk assessment for the voting system per VVSG 14.1
 - `uat-reports/` contains the voter and poll worker reports from usability and accessibility testing
 - `warranty-model/` contains a copy of the VotingWorks service contract
