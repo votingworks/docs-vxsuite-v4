@@ -21,3 +21,14 @@ A search feature is also available for these hosted documents by clicking `Ask o
 - `risk-assessment/` contains a risk assessment for the voting system per VVSG 14.1
 - `uat-reports/` contains the voter and poll worker reports from usability and accessibility testing
 - `warranty-model/` contains a copy of the VotingWorks service contract
+
+## Code Repositories
+
+There are four code repositories relevant to the voting system:
+
+- [vxsuite](https://github.com/votingworks/vxsuite/tree/v4.0.0-release-branch) — Core application code
+- [kiosk-browser](https://github.com/votingworks/kiosk-browser/tree/v4.0.0-release-branch) — Generic Electron-based kiosk-mode browser
+- [vxsuite-complete-system](https://github.com/votingworks/vxsuite-complete-system/tree/v4.0.0-rc2) — Links compatible versions of vxsuite and kiosk-browser, and includes the scripts necessary to create a production machine
+- [vxsuite-build-system](https://github.com/votingworks/vxsuite-build-system/tree/v4.0.0) — Our framework for building VxSuite and managing its dependencies, across versions and environments
+
+Separate from the above is [vx-iso](https://github.com/votingworks/vx-iso), our VotingWorks-specific ISO installer program.
