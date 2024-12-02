@@ -1,0 +1,6 @@
+[submodule "docs-vxsuite-v4-user-manual"]
+	path = docs-vxsuite-v4-user-manual
+	url = https://github.com/votingworks/docs-vxsuite-v4-user-manual
+[submodule "docs-vxsuite-v4-tdp"]
+	path = docs-vxsuite-v4-tdp
+	url = https://github.com/votingworks/docs-vxsuite-v4-tdp
