@@ -18,17 +18,25 @@
 
 ## Downloading Documentation
 
-Documentation available at docs.voting.works is available for PDF download on the website by clicking `Export as PDF`. Click `All pages` for the entirety of the documentation. For ease of navigation, a search feature is also available for these hosted documents by clicking `Ask or search` or `ctrl-K` when viewing the documentation. You can search for a given section of the documentation or ask a question in natural language and receive an AI summarized answer based on the documentation content.
+Documentation available at docs.voting.works is available for PDF download or printing on the website by clicking `Export as PDF`. Click `All pages` for the entirety of either the TDP or User Manual. Then click the print icon to send to printer or save as PDF. 
 
 The files in this repository are available for download as a .zip file by clicking `Code` > `Download Zip`. Submodules are available for download in the same manner from their respective linked repositories.
 
+To save all documentation in one folder:
+- Clone this repo `git clone https://github.com/votingworks/docs-vxsuite-v4`
+- Initialize and populate the submodule directories `git submodule update --init`
+
+## Hosted Documentation Search
+
+For ease of navigation, a search feature is also available for documents available at docs.voting.works by clicking `Ask or search` or `ctrl-K` when viewing the documentation. You can search for a given section of the documentation or ask a question in natural language and receive an AI summarized answer based on the documentation content.
+
 ## Code Repositories
 
-There are four code repositories relevant to the voting system that this respository documents:
+This repository documents the following code repositories that comprise the voting system:
 
 - [vxsuite](https://github.com/votingworks/vxsuite/tree/v4.0.0-release-branch) — Core application code
 - [kiosk-browser](https://github.com/votingworks/kiosk-browser/tree/v4.0.0-release-branch) — Generic Electron-based kiosk-mode browser
 - [vxsuite-complete-system](https://github.com/votingworks/vxsuite-complete-system/tree/v4.0.0-rc2) — Links compatible versions of vxsuite and kiosk-browser, and includes the scripts necessary to create a production machine
 - [vxsuite-build-system](https://github.com/votingworks/vxsuite-build-system/tree/v4.0.0) — Our framework for building VxSuite and managing its dependencies, across versions and environments
 
-Separate from the above is [vx-iso](https://github.com/votingworks/vx-iso), our VotingWorks-specific ISO installer program.
+Software installation documentation also refers to [vx-iso](https://github.com/votingworks/vx-iso), which is the VotingWorks-specific ISO installer program.
