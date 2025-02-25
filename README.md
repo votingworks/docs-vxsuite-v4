@@ -13,6 +13,7 @@
   - `production/` contains QA documentation used in voting system component production
   - `testing/` contains test results for the system performed by either external bodies or by VotingWorks
 - `risk-assessment/` contains a risk assessment for the voting system per VVSG 14.1
+- `software-docs/` contains documentation specific to software such as logging event descriptions and coding conventions
 - `uat-reports/` contains the voter and poll worker reports from usability and accessibility testing
 - `warranty-model/` contains a copy of the VotingWorks service contract
 
