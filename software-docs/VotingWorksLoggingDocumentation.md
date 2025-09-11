@@ -150,9 +150,33 @@ IDs are logged with each log to identify the log being written.
 **Type:** [user-action](#user-action)
 **Description:** The user has saved an equipment readiness report.
 **Machines:** All
-### headphones-detection-errors
+### audio-device-detection-error
 **Type:** [application-status](#application-status)
-**Description:** Error while attempting to detect headphones.
+**Description:** Error while attempting to detect audio devices.
+**Machines:** All
+### audio-device-missing
+**Type:** [application-status](#application-status)
+**Description:** An expected audio device was not detected.
+**Machines:** All
+### audio-device-selected
+**Type:** [application-status](#application-status)
+**Description:** A default audio output device was selected.
+**Machines:** All
+### audio-device-selection-error
+**Type:** [application-status](#application-status)
+**Description:** Error while attempting to select a default audio output device.
+**Machines:** All
+### audio-volume-changed
+**Type:** [application-status](#application-status)
+**Description:** The volume level for an audio output device was changed.
+**Machines:** All
+### audio-volume-change-error
+**Type:** [application-status](#application-status)
+**Description:** Error while attempting to change the volume of an audio output device.
+**Machines:** All
+### audio-playback-error
+**Type:** [application-status](#application-status)
+**Description:** Error while attempting to play audio.
 **Machines:** All
 ### unknown-error
 **Type:** [application-status](#application-status)
@@ -214,6 +238,10 @@ IDs are logged with each log to identify the log being written.
 **Type:** [system-status](#system-status)
 **Description:** The machine has completed all the steps to shutdown and will now power down or reboot.
 **Machines:** All
+### usb-device-reconnect-attempted
+**Type:** [system-action](#system-action)
+**Description:** A message from the machine kernel about an application-initiated attempt to reconnect an externally-connected USB device.
+**Machines:** All
 ### usb-device-change-detected
 **Type:** [system-status](#system-status)
 **Description:** A message from the machine kernel about an externally-connected USB device, usually when a new device is connected or disconnected.
@@ -273,6 +301,10 @@ IDs are logged with each log to identify the log being written.
 ### import-cast-vote-records-init
 **Type:** [user-action](#user-action)
 **Description:** Cast vote records are being imported from a USB drive.
+**Machines:** vx-admin
+### import-cast-vote-records-mark-score-distribution
+**Type:** [user-action](#user-action)
+**Description:** Cast vote records have been imported and the associated mark scores have been consolidated into a distribution map.
 **Machines:** vx-admin
 ### import-cast-vote-records-complete
 **Type:** [user-action](#user-action)
@@ -366,6 +398,10 @@ IDs are logged with each log to identify the log being written.
 **Type:** [application-status](#application-status)
 **Description:** Message from the driver handling the fujitsu scanner regarding scanning progress.
 **Machines:** vx-central-scan
+### imprinter-status
+**Type:** [application-status](#application-status)
+**Description:** Indicates the status of the imprinter, namely whether or not it is registering as attached.
+**Machines:** vx-central-scan
 ### election-package-load-from-usb-complete
 **Type:** [user-action](#user-action)
 **Description:** The election package has been read from the USB drive. Success or failure indicated by disposition.
@@ -440,7 +476,7 @@ IDs are logged with each log to identify the log being written.
 **Machines:** vx-mark-scan
 ### pat-device-error
 **Type:** [system-status](#system-status)
-**Description:** VxMark encountered an error with the built-in PAT device port or the device itself
+**Description:** VxMarkScan encountered an error with the built-in PAT device port or the device itself
 **Machines:** vx-mark-scan
 ### paper-handler-state-machine-transition
 **Type:** [application-status](#application-status)
@@ -513,7 +549,7 @@ IDs are logged with each log to identify the log being written.
 ### unexpected-hardware-device-response
 **Type:** [system-status](#system-status)
 **Description:** A connected hardware device returned an unexpected response.
-**Machines:** vx-mark-scan
+**Machines:** vx-pollbook
 ### no-pid
 **Type:** [system-status](#system-status)
 **Description:** No PID was readable from PID file, or PID file did not exist.
@@ -554,3 +590,63 @@ IDs are logged with each log to identify the log being written.
 **Type:** [application-action](#application-action)
 **Description:** An API call was made.
 **Machines:** vx-design
+### socket-client-connect-init
+**Type:** [application-action](#application-action)
+**Description:** An application attempted to connect a client to a socket.
+**Machines:** All
+### socket-client-connected
+**Type:** [application-status](#application-status)
+**Description:** An attempt by an application to connect to a socket was resolved.
+**Machines:** All
+### socket-client-disconnected
+**Type:** [application-status](#application-status)
+**Description:** A socket client was disconnected.
+**Machines:** All
+### socket-client-error
+**Type:** [application-status](#application-status)
+**Description:** An error was reported by a socket client.
+**Machines:** All
+### socket-server-bind
+**Type:** [application-action](#application-action)
+**Description:** A process attempted to bind a socket.
+**Machines:** All
+### socket-server-close
+**Type:** [application-action](#application-action)
+**Description:** A socket server was closed.
+**Machines:** All
+### socket-server-awaiting-client
+**Type:** [application-status](#application-status)
+**Description:** A socket server is awaiting a client.
+**Machines:** All
+### socket-server-error
+**Type:** [application-status](#application-status)
+**Description:** An error was reported by a socket server.
+**Machines:** All
+### barcode-scanned
+**Type:** [application-status](#application-status)
+**Description:** A barcode was scanned.
+**Machines:** All
+### pollbook-network-status
+**Type:** [application-status](#application-status)
+**Description:** A status message indicating an update to the pollbook network.
+**Machines:** vx-pollbook
+### pollbook-configuration-status
+**Type:** [application-status](#application-status)
+**Description:** A status message indicating an update to the pollbook configuration.
+**Machines:** vx-pollbook
+### pollbook-paper-backup-status
+**Type:** [application-status](#application-status)
+**Description:** A status message indicating an update to the pollbook paper backup.
+**Machines:** vx-pollbook
+### navigation-page-change
+**Type:** [application-status](#application-status)
+**Description:** A status message indicating change to the frontend navigation page.
+**Machines:** All
+### pollbook-duplicate-check-in-detected
+**Type:** [application-status](#application-status)
+**Description:** More then one check in event (ignoring undone checkins) for the same voter was detected in the system.
+**Machines:** vx-pollbook
+### data-check-on-startup
+**Type:** [application-status](#application-status)
+**Description:** Whether election results or scanned ballot data is present in the database at machine startup.
+**Machines:** vx-central-scan, vx-admin
