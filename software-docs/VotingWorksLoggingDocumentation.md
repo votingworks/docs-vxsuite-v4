@@ -81,7 +81,7 @@ IDs are logged with each log to identify the log being written.
 ### printer-status-changed
 **Type:** [application-status](#application-status)
 **Description:** Application saw a change in the status of the currently connected printer.
-**Machines:** All
+**Machines:** vx-scan
 ### printer-print-request
 **Type:** [user-action](#user-action)
 **Description:** A print request was triggered.
@@ -105,11 +105,11 @@ IDs are logged with each log to identify the log being written.
 ### toggle-test-mode-init
 **Type:** [user-action](#user-action)
 **Description:** User has initiated toggling between test mode and live mode in the current application.
-**Machines:** All
+**Machines:** vx-central-scan, vx-mark, vx-mark-scan, vx-scan
 ### toggled-test-mode
 **Type:** [user-action](#user-action)
 **Description:** User has finished toggling between live mode and test mode in the given application. Success or failure is indicated by the disposition.
-**Machines:** All
+**Machines:** vx-central-scan, vx-mark, vx-mark-scan, vx-scan
 ### file-saved
 **Type:** [user-action](#user-action)
 **Description:** File is saved to a USB drive. Success or failure indicated by disposition. Type of file specified with "fileType" key. For success logs the saved filename specified with "filename" key.
@@ -206,13 +206,13 @@ IDs are logged with each log to identify the log being written.
 **Type:** [system-action](#system-action)
 **Description:** Database created and setup. Success or failure indicated by disposition.
 **Machines:** All
-### database-destroy-init
+### database-reset-init
 **Type:** [system-action](#system-action)
-**Description:** Initiating destruction of the database.
+**Description:** Initiating reset of the database.
 **Machines:** All
-### database-destroy-complete
+### database-reset-complete
 **Type:** [system-action](#system-action)
-**Description:** Database destroyed. Success or failure indicated by disposition.
+**Description:** Database reset. Success or failure indicated by disposition.
 **Machines:** All
 ### file-read-error
 **Type:** [system-action](#system-action)
@@ -245,6 +245,14 @@ IDs are logged with each log to identify the log being written.
 ### usb-device-change-detected
 **Type:** [system-status](#system-status)
 **Description:** A message from the machine kernel about an externally-connected USB device, usually when a new device is connected or disconnected.
+**Machines:** All
+### usb-port-status
+**Type:** [system-status](#system-status)
+**Description:** The status of the USB ports on the machine, either enabled or disabled.
+**Machines:** All
+### usb-ports-toggled
+**Type:** [user-action](#user-action)
+**Description:** The user has either enabled or disabled USB ports.
 **Machines:** All
 ### info
 **Type:** [system-status](#system-status)
