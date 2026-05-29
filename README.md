@@ -2,7 +2,7 @@
 
 ## Repository Structure
 - `conformity-matrix/` contains a matrix of each VVSG2 requirement with a brief description of how VxSuite meets the requirement, how VotingWorks tests meeting the requirement, and a reference to where to find more documentation supporting this requirement in the Technical Data Package (TDP).
-- `docs-vxsuite-v4-tdp` is a submodule containing the content of the VxSuite TDP that is publicly avialable at: https://docs.voting.works/vxsuite-tdp-v4
+- `docs-vxsuite-v4-tdp` is a submodule containing the content of the VxSuite TDP that is publicly available at: https://docs.voting.works/vxsuite-tdp-v4
 - `docs-vxsuite-v4-user-manual` is a submodule containing the of the VxSuite User Manual that is publicly available at: https://docs.voting.works/vxsuite-user-manual-v4
 - `hardware-assets/`
   - `BOMs/` contains the detailed Bill of Materials for each component in the system
