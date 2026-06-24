@@ -8,9 +8,7 @@
   - `BOMs/` contains the detailed Bill of Materials for each component in the system
   - `cots-documentation/` contains all of the data sheets for COTS products used in the system
   - `drawings/` contains all of the mechanical drawings for manufactured parts in the system
-  - `workplans/` contains detailed instructions for assembling the system
 - `quality-assurance/` contains documents used in the VotingWorks quality assurance process
-  - `production/` contains QA documentation used in voting system component production
   - `testing/` contains test results for the system performed by either external bodies or by VotingWorks
   - `rca/` contains root cause analysis (RCA) documents
 - `risk-assessment/` contains a risk assessment for the voting system per VVSG 14.1
