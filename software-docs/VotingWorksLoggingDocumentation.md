@@ -354,6 +354,10 @@ IDs are logged with each log to identify the log being written.
 **Type:** [user-action](#user-action)
 **Description:** User adjudicated a write-in.
 **Machines:** vx-admin
+### qualified-write-in-candidate-updated
+**Type:** [user-action](#user-action)
+**Description:** User updated a qualified write-in candidate.
+**Machines:** vx-admin
 ### clear-ballot-data-init
 **Type:** [user-action](#user-action)
 **Description:** User has initiated clearing ballot data in the current application.
@@ -446,9 +450,9 @@ IDs are logged with each log to identify the log being written.
 **Type:** [user-action](#user-action)
 **Description:** Poll worker confirmed that they emptied the ballot box.
 **Machines:** vx-mark-scan
-### precinct-configuration-changed
+### polling-place-changed
 **Type:** [user-action](#user-action)
-**Description:** User has changed the precinct setting.
+**Description:** User has changed the polling place setting.
 **Machines:** vx-mark, vx-scan, vx-mark-scan
 ### scanner-batch-started
 **Type:** [system-action](#system-action)
@@ -662,7 +666,43 @@ IDs are logged with each log to identify the log being written.
 **Type:** [user-action](#user-action)
 **Description:** A user has changed the ballot casting mode.
 **Machines:** vx-scan
+### admin-network-status
+**Type:** [application-status](#application-status)
+**Description:** A status message indicating an update to the multi-station admin network, such as host discovery, client connection changes, or multiple host detection.
+**Machines:** vx-admin
+### admin-machine-mode-changed
+**Type:** [user-action](#user-action)
+**Description:** A user changed the VxAdmin machine mode between host and client.
+**Machines:** vx-admin
+### admin-client-adjudication-toggled
+**Type:** [user-action](#user-action)
+**Description:** A user enabled or disabled multi-station client adjudication.
+**Machines:** vx-admin
+### admin-ballot-claimed
+**Type:** [application-action](#application-action)
+**Description:** A ballot was claimed for adjudication by a client machine.
+**Machines:** vx-admin
+### admin-ballot-adjudication-complete
+**Type:** [application-action](#application-action)
+**Description:** A client machine completed adjudication of a ballot and resolved it.
+**Machines:** vx-admin
+### admin-ballot-released
+**Type:** [application-action](#application-action)
+**Description:** A claimed ballot was released back to the adjudication queue.
+**Machines:** vx-admin
+### admin-adjudication-proxy-error
+**Type:** [application-status](#application-status)
+**Description:** A client adjudication proxy request failed because the host is not connected.
+**Machines:** vx-admin
+### admin-contest-adjudicated
+**Type:** [application-action](#application-action)
+**Description:** A contest on a ballot was adjudicated.
+**Machines:** vx-admin
 ### low-disk-space
 **Type:** [system-status](#system-status)
 **Description:** Free disk space is low.
 **Machines:** All
+### live-report-viewed
+**Type:** [application-action](#application-action)
+**Description:** A user viewed the live reporting QR Code.
+**Machines:** vx-admin, vx-scan
